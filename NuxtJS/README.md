@@ -59,3 +59,15 @@ we can get route parameter using this variable.
 - Nuxt child component used to repeat the component to its all related pages. For example if we want to show some component only for user group of pages.
 	 1. File name should match with the folder name we want to use
 	 2. Should use tag `<nuxt-child />`
+ ---
+## Custom Error Pages
+
+- jsut create `error.vue` in the **layout** folder
+
+## Difference between VUE and NUXT in getting API
+- Using **axios** in vue, we use `mounted()` function to get APIs
+- in Nuxt we use **asyncdata()** to get API and that will SSR
+- we can't use `this.something` in asyncdata instead we use `context.something`
+- **asyncdata** runs in both server and client side
+
+
