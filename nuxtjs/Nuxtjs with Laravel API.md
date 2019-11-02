@@ -9,7 +9,8 @@
 - Pre-rendered before serving to client
 - SEO support
 - Benefits of **SPA** and **SSR** together.
-
+- 
+- 
 ## Types of Applications can be built
 
 - Universal App
@@ -63,5 +64,5 @@ we can get route parameter using this variable.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4ODU5NDUwN119
+eyJoaXN0b3J5IjpbLTgwMDAxMzEyM119
 -->
