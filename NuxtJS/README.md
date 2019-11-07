@@ -147,6 +147,37 @@ computed: {
 }
 ```
 
+## Plugins
+- To add plugins(npm): install the necessary plugin using `npm` or `yarn`.
+- Then create `.js` file inside the plugins directory to activate the plugins option
+- Then register the plugin in `nuxt.config.js` file
+
+```
+ plugins: [
+    '@/plugins/scrollto.js'
+  ],
+  ```
+  - to add plugin whihc is not ssr
+  ```
+   plugins: [
+    { src: 'PLUGIN LOCAION', ssr: false }
+  ],
+  ```
+  ## nuxtServerInit()
+  - to fetch the data when the application is loading.
+  - For example: We can load all the posts needed to show in the posts page even when the application is intialized.
+  - fetch all data and store in the Veux store. Then we can use whenever and wherever we need.
+  
+```
+export const actions = {
+    async nuxtServerInit({commit}) {
+        let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts');
+        commit("SET_POSTS", data);
+    }
+};
+```
+> nuxtServerInit() only can run on server side. So SPA and Static website won't run this method. 
+
 
 
 
